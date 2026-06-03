@@ -20,7 +20,7 @@ const ProjetsContainer = () => {
     <section className="bg-background overflow-hidden pb-20">
       {/* Header : titre au dessus, flèches en dessous sur mobile */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between py-5 px-8 md:px-20 gap-4">
-        <h2 className="text-primary text-5xl md:text-5xl font-sans select-none">
+        <h2 className="text-primary mb-8 text-5xl md:text-5xl font-sans select-none">
           <span className="font-display">M</span>a sélection web
         </h2>
 
