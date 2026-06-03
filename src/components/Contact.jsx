@@ -4,9 +4,6 @@ import { FaPhoneAlt } from "react-icons/fa";
 import NageurEclaireur from "./NageurEclaireur";
 
 const Contact = () => {
-  const email = "cleaportolan@gmail.com";
-  const telephone = "06 47 83 71 25";
-
   return (
     <div className="flex flex-col justify-center items-center gap-10">
       <div className="w-70">
@@ -21,15 +18,17 @@ const Contact = () => {
         </div>
         <div>
           <Bouton
-            content={email}
+            content="cleaportolan@gmail.com"
             icon={MdEmail}
-            onClick={`mailto:${email}`}
+            onClick={() =>
+              (window.location.href = "mailto:cleaportolan@gmail.com")
+            }
             width="280px"
           />
           <Bouton
-            content={telephone}
+            content="06 47 83 71 25"
             icon={FaPhoneAlt}
-            onClick={`telto:${telephone}`}
+            onClick={() => (window.location.href = "tel:0647837125")}
             width="280px"
           />
         </div>

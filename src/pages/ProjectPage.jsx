@@ -16,6 +16,9 @@ const ProjectPage = () => {
   const { navigateWithTransition } = useTransition();
   const { slug } = useParams();
   const project = projectsData.find((p) => p.slug === slug);
+  const currentIndex = projectsData.findIndex((p) => p.slug === slug);
+  const prevProject = projectsData[currentIndex - 1] ?? null;
+  const nextProject = projectsData[currentIndex + 1] ?? null;
   const itemsValeurAjoutee = project.valeurAjoutee.map((v) => ({
     name: v.name,
     description: v.description,
@@ -69,7 +72,7 @@ const ProjectPage = () => {
         className="transition-opacity anim-item"
       >
         <IoArrowBackSharp size={25} color="var(--color-primary)" />
-        <span>Retour</span>
+        <span>Retour aux projets</span>
       </button>
       <h1 className="text-primary mt-10 text-8xl font-sans">
         <SplitText
@@ -156,6 +159,80 @@ const ProjectPage = () => {
           <span className="font-display">M</span>a valeur ajoutée au projet
         </h3>
         <AccordionProject items={itemsValeurAjoutee} />
+      </div>
+      {/* Navigation entre projets */}
+      <div className="mt-24 flex justify-between items-end gap-6 pt-8">
+        {/* Projet précédent */}
+        <div className="flex-1">
+          {prevProject ? (
+            <button
+              onClick={() =>
+                navigateWithTransition(`/projet/${prevProject.slug}`)
+              }
+              className="group flex items-center gap-4 text-left cursor-pointer"
+            >
+              {/* Miniature */}
+              <div
+                className="w-16 h-16 rounded-xl flex-shrink-0 overflow-hidden relative"
+                style={{
+                  backgroundImage: `url(${prevProject.backgroundImage})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <IoArrowBackSharp size={20} color="white" />
+                </div>
+              </div>
+              <div>
+                <span className="text-primary/40 text-xs font-sans tracking-widest uppercase block mb-1">
+                  Précédent
+                </span>
+                <p className="text-primary text-lg font-display transition-all">
+                  {prevProject.title}
+                </p>
+              </div>
+            </button>
+          ) : (
+            <div />
+          )}
+        </div>
+
+        {/* Projet suivant */}
+        <div className="flex-1 flex justify-end">
+          {nextProject ? (
+            <button
+              onClick={() =>
+                navigateWithTransition(`/projet/${nextProject.slug}`)
+              }
+              className="group flex items-center gap-4 text-right cursor-pointer"
+            >
+              <div className="text-right">
+                <span className="text-primary/40 text-xs font-sans tracking-widest uppercase block mb-1">
+                  Suivant
+                </span>
+                <p className="text-primary text-lg font-display transition-all">
+                  {nextProject.title}
+                </p>
+              </div>
+              {/* Miniature */}
+              <div
+                className="w-16 h-16 rounded-xl flex-shrink-0 overflow-hidden relative"
+                style={{
+                  backgroundImage: `url(${nextProject.backgroundImage})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <IoMdArrowForward size={20} color="white" />
+                </div>
+              </div>
+            </button>
+          ) : (
+            <div />
+          )}
+        </div>
       </div>
     </div>
   );

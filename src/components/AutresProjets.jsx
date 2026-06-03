@@ -4,40 +4,39 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const SRCS = [
-  "/img/autres-projets/flaine3.jpg",
-  "/img/autres-projets/bisou-sucre-carte.jpg",
-  "/img/autres-projets/Clea_Portolan_Web_Design_graphique_Movember_2.jpg",
-  "/img/autres-projets/Clea_Portolan_Web_Design__Graphique_Visions.jpg",
-  "/img/autres-projets/aleteia.jpg",
-  "/img/autres-projets/Clea_Portolan_Design_Graphique_Edmond.jpg",
-  "/img/autres-projets/Clea_Portolan_Design_Graphique_Evenementiel_Mariage_1.jpg",
-  "/img/autres-projets/Clea_Portolan_Design_Graphique_Kerouac_2.jpg",
-  "/img/autres-projets/Clea_Portolan_Design_Graphique_Maxime_Depinoy1.jpg",
-  "/img/autres-projets/Clea_Portolan_Design_Graphique_Maxime_Depinoy4.jpg",
-  "/img/autres-projets/Clea_Portolan_Design_Graphique_Mystere_A_L_IUT.jpg",
-  "/img/autres-projets/Clea_Portolan_Design_graphique_Web_Like-Communication_1.jpg",
-  "/img/autres-projets/Clea_Portolan_Design_Graphique_WesAnderson_3.jpg",
-  "/img/autres-projets/Clea_Portolan_photographie_studio61.jpg",
-  "/img/autres-projets/Clea_Portolan_photographie_studio62.jpg",
-  "/img/autres-projets/Clea_Portolan_Design_Graphique_Evenementiel_Mariage_2.jpg",
-  "/img/autres-projets/Clea_Portolan_Web_Design_Graphique_Imnesia1.jpg",
-  "/img/autres-projets/dare_mockup.jpg",
-  "/img/autres-projets/fondEcran.jpg",
-  "/img/autres-projets/henri-matisse-brochure.jpg",
-  "/img/autres-projets/KYVOS_PLAY.png",
-  "/img/autres-projets/lampadaireVert.JPG",
-  "/img/autres-projets/logoStyleWaka.png",
-  "/img/autres-projets/miroir_mockup.jpg",
-  "/img/autres-projets/mockup_portfolio_v2.jpg",
-  "/img/autres-projets/terre_eclat_home.jpg",
+  "/cleaportolan/img/autres-projets/flaine3.jpg",
+  "/cleaportolan/img/autres-projets/bisou-sucre-carte.jpg",
+  "/cleaportolan/img/autres-projets/Clea_Portolan_Web_Design_graphique_Movember_2.jpg",
+  "/cleaportolan/img/autres-projets/Clea_Portolan_Web_Design__Graphique_Visions.jpg",
+  "/cleaportolan/img/autres-projets/aleteia.jpg",
+  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_Edmond.jpg",
+  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_Evenementiel_Mariage_1.jpg",
+  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_Kerouac_2.jpg",
+  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_Maxime_Depinoy1.jpg",
+  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_Maxime_Depinoy4.jpg",
+  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_Mystere_A_L_IUT.jpg",
+  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_graphique_Web_Like-Communication_1.jpg",
+  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_WesAnderson_3.jpg",
+  "/cleaportolan/img/autres-projets/Clea_Portolan_photographie_studio61.jpg",
+  "/cleaportolan/img/autres-projets/Clea_Portolan_photographie_studio62.jpg",
+  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_Evenementiel_Mariage_2.jpg",
+  "/cleaportolan/img/autres-projets/Clea_Portolan_Web_Design_Graphique_Imnesia1.jpg",
+  "/cleaportolan/img/autres-projets/dare_mockup.jpg",
+  "/cleaportolan/img/autres-projets/fondEcran.jpg",
+  "/cleaportolan/img/autres-projets/henri-matisse-brochure.jpg",
+  "/cleaportolan/img/autres-projets/KYVOS_PLAY.png",
+  "/cleaportolan/img/autres-projets/lampadaireVert.JPG",
+  "/cleaportolan/img/autres-projets/logoStyleWaka.png",
+  "/cleaportolan/img/autres-projets/miroir_mockup.jpg",
+  "/cleaportolan/img/autres-projets/mockup_portfolio_v2.jpg",
+  "/cleaportolan/img/autres-projets/terre_eclat_home.jpg",
 ];
 
 // Découpe le tableau
-const col1Srcs = SRCS.slice(0, 8); 
-const col2Srcs = SRCS.slice(9, 15);  
-const col3Srcs = SRCS.slice(16, 26);  
+const col1Srcs = SRCS.slice(0, 8);
+const col2Srcs = SRCS.slice(9, 15);
+const col3Srcs = SRCS.slice(16, 26);
 
 export default function AutresProjets() {
   const sectionRef = useRef(null);
@@ -83,11 +82,15 @@ export default function AutresProjets() {
           return isMobile ? distance * 0.5 : distance;
         },
       },
-      0
+      0,
     );
 
     if (!isMobile) {
-      tl.to(col3, { y: () => -(col3.scrollHeight - container.clientHeight) }, 0);
+      tl.to(
+        col3,
+        { y: () => -(col3.scrollHeight - container.clientHeight) },
+        0,
+      );
     }
 
     const resizeTimer = { current: null };
@@ -104,23 +107,28 @@ export default function AutresProjets() {
   }, []);
 
   return (
-    <section id="autres-projets" className="collection bg-primary" ref={sectionRef}>
+    <section
+      id="autres-projets"
+      className="collection bg-primary"
+      ref={sectionRef}
+    >
       <div className="collection-inner">
         {/* COL LEFT — texte statique */}
         <div className="texte col-left p-20 flex flex-col gap-10 justify-center">
-          <h2 className="text-background text-5xl font-sans select-none mb-8">
-            <span className="font-display">C</span>oder, et pas seulement
+          <h2 className="text-background text-5xl font-sans select-none">
+            <span className="font-display">P</span>enser l'écosystème de marque
           </h2>
+          <h3 className="text-background text-xl"><span className="font-display">D</span>e l'identité à l'écran</h3>
           <p
             className="text-background max-w-xl leading-relaxed"
             style={{ opacity: 0.8 }}
           >
-            Si le code a autant de sens pour moi, c'est parce que je ne fais pas
-            que ça. J'ai toujours été source d'idées, eu soif de faire,
-            d'expérimenter, de construire. Parce que quand on a le goût du design
-            bien fait, ergonomique, attrayant ou expérimental, naît un éventail
-            d'influences qui forge une identité créatrice. Donc, à tous ces
-            projets, merci d'avoir existés.
+            Pour moi, le code n'est pas une fin en soi, c'est le prolongement
+            logique d'une intention de design. Concevoir l'identité visuelle
+            d'une marque (DA) pour ensuite la déployer dans un produit numérique
+            interactif et ergonomique (UX/UI) demande une vision d'ensemble.
+            Voici les projets graphiques et les expérimentations visuelles qui
+            forgent mon identité créative et ma sensibilité éditoriale.
           </p>
         </div>
 

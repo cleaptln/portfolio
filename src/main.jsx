@@ -6,7 +6,7 @@ import App from './App.jsx'
 import { TransitionProvider } from './components/context/TransitionContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/cleaportolan">
     <TransitionProvider>
         <App />
     </TransitionProvider>

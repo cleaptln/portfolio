@@ -229,31 +229,8 @@ body {
   /* RESPONSIVE PROFIL */
   /* ========================= */
 
-  .profil {
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-  }
-
-  .carte,
-  .description {
-    position: relative;
-    top: auto;
-    right: auto;
-    left: auto;
-    transform: none;
-    width: 100%;
-    height: auto;
-  }
   .description p {
     max-width: 100%;
-  }
-  .carte {
-    order: 1;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-    width: 100%;
   }
 
   .description {
@@ -265,8 +242,6 @@ body {
   }
 }
 
-@media (min-width: 1025px) {
-}
 @media (max-width: 767px) {
   .contact-content {
     flex-direction: column;
@@ -281,7 +256,8 @@ body {
     padding: 5px;
     height: 400px;
   }
-  .projectPage {
+  .projectPage,
+  .alternance_page {
     padding: 0 8% 100px 8%;
   }
   .projectPage h1 p {
@@ -300,7 +276,7 @@ body {
   }
   .badges {
     display: flex;
-    gap:10px;
+    gap: 10px;
     flex-wrap: wrap;
   }
   h1 {

@@ -8,12 +8,17 @@ import {
   SiWordpress,
   SiMysql,
   SiLaravel,
+  SiFilament,
   SiAdobephotoshop,
   SiAdobeillustrator,
   SiAdobeaftereffects,
+  SiAdobepremierepro,
+  SiAdobedreamweaver,
   SiCss3,
-  SiHtml5
+  SiHtml5,
+  SiThreedotjs,
 } from "react-icons/si";
+
 
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
@@ -32,6 +37,7 @@ const techLogos = [
   { node: <SiWordpress />, title: "WordPress", href: "https://wordpress.org/" },
   { node: <SiMysql />, title: "MySQL", href: "https://www.mysql.com/" },
   { node: <SiLaravel />, title: "Laravel", href: "https://laravel.com/" },
+  { node: <SiFilament />, title: "Filament", href: "https://filamentphp.com/" },
   {
     node: <SiAdobephotoshop />,
     title: "Photoshop",
@@ -47,8 +53,27 @@ const techLogos = [
     title: "After Effects",
     href: "https://www.adobe.com/products/aftereffects.html",
   },
-    {node: <SiCss3 />, title: "CSS3", href: "https://developer.mozilla.org/fr/docs/Web/CSS" },
-    {node: <SiHtml5 />, title: "HTML5", href: "https://developer.mozilla.org/fr/docs/Web/HTML" },   
+  {
+    node: <SiAdobepremierepro />,
+    title: "Premiere Pro",
+    href: "https://www.adobe.com/products/premiere.html",
+  },
+  {
+    node: <SiAdobedreamweaver />,
+    title: "Dreamweaver",
+    href: "https://www.adobe.com/products/dreamweaver.html",
+  },
+  {
+    node: <SiCss3 />,
+    title: "CSS3",
+    href: "https://developer.mozilla.org/fr/docs/Web/CSS",
+  },
+  {
+    node: <SiHtml5 />,
+    title: "HTML5",
+    href: "https://developer.mozilla.org/fr/docs/Web/HTML",
+  },
+  { node: <SiThreedotjs />, title: "Three.js", href: "https://threejs.org/" },
 ];
 
 function LogosLoopSection() {
