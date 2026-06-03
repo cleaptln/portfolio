@@ -42,7 +42,7 @@ const Home = () => {
             {/* Lanyard — photo statique sur mobile, 3D sur desktop */}
             <div className="md:hidden w-full flex justify-center py-12 px-8">
               <img
-                src="/public/img/card_mobile.png"
+                src="/cleaportolan/img/card_mobile.png"
                 alt="Carte Cléa Portolan"
                 className="h-72 object-contain"
               />
@@ -81,7 +81,7 @@ const Home = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-8">
                 <a
-                  href="/public/Clea_Portolan_DA_Web_CV.pdf"
+                  href="Clea_Portolan_DA_Web_CV.pdf"
                   download="Clea_Portolan_DA_Web_CV.pdf"
                   className="flex"
                 >
