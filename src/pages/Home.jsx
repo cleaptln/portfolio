@@ -38,13 +38,13 @@ const Home = () => {
       <main>
         {/* SECTION PROFIL */}
         <section id="mon-profil">
-          <section className="profil w-full relative flex flex-col md:block md:h-screen">
+          <section className="profil w-full relative flex flex-col md:block md:h-[90vh]">
             {/* Lanyard — photo statique sur mobile, 3D sur desktop */}
-            <div className="md:hidden w-full flex justify-center py-12 px-8">
+            <div className="md:hidden w-full h-auto">
               <img
-                src="/cleaportolan/img/card_mobile.png"
+                src="/cleaportolan/img/clea_card_mobile.png"
                 alt="Carte Cléa Portolan"
-                className="h-72 object-contain"
+                className="w-full object-contain"
               />
             </div>
             <div className="hidden md:block carte absolute top-0 right-60 w-full h-full">
@@ -52,37 +52,39 @@ const Home = () => {
             </div>
 
             {/* Description */}
-            <div className="descriptionpx -8 py-12 md:absolute md:top-[50%] md:translate-y-[-50%] md:left-[50%] md:pr-10 md:px-0 md:py-0 z-10">
-              <h2 className="text-primary text-4xl md:text-5xl font-sans select-none mb-8 ">
+            <div className="px-8 py-12 md:absolute md:top-[50%] md:translate-y-[-50%] md:left-[50%] md:pr-10 md:px-0 md:py-0 z-10 [&_p]:max-w-full">
+              <h2 className="text-primary leading-14 text-4xl md:text-5xl font-sans select-none mb-8 ">
                 <span className="font-display">D</span>irection artistique
                 <br />
                 <span className="font-display">I</span>nteraction &{" "}
                 <span className="font-display">P</span>oduct designer
               </h2>
+              <div className="md:max-w-[680px]">
+                <p className="text-primary/70 leading-relaxed max-w-xl mb-8">
+                  Je suis Cléa Portolan, issue d'un BUT MMI, parcours
+                  développement web.{" "}
+                  <strong className="text-primary">
+                    Activement en recherche d'alternance,
+                  </strong>{" "}
+                  je possède un éventail de compétences pluridisciplinaires et
+                  une très bonne capacité d'apprentissage. J'use d'une vision
+                  créative passionnelle, nourrie d'une réflexion organique qui
+                  s'épanouit dans la complexité.
+                </p>
 
-              <p className="text-primary/70 leading-relaxed max-w-xl mb-8">
-                Je suis Cléa Portolan, issue d'un BUT MMI, parcours
-                développement web.{" "}
-                <strong className="text-primary">
-                  Activement en recherche d'alternance,
-                </strong>{" "}
-                je possède un éventail de compétences pluridisciplinaires et une
-                très bonne capacité d'apprentissage. J'use d'une vision créative
-                passionnelle, nourrie d'une réflexion organique qui s'épanouit
-                dans la complexité.
-              </p>
-
-              <h3 className="opacity-50 font-display text-lg">Mon objectif</h3>
-              <p className="text-primary/70 leading-relaxed max-w-xl">
-                Concevoir des produits numériques et des identités de marque
-                mémorables, de la vision stratégique à l'expérience interactive
-                finale.
-              </p>
-
+                <h3 className="opacity-50 font-display text-lg">
+                  Mon objectif
+                </h3>
+                <p className="text-primary/70 leading-relaxed max-w-xl">
+                  Concevoir des produits numériques et des identités de marque
+                  mémorables, de la vision stratégique à l'expérience
+                  interactive finale.
+                </p>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-8">
                 <a
-                  href="Clea_Portolan_DA_Web_CV.pdf"
-                  download="Clea_Portolan_DA_Web_CV.pdf"
+                  href="/cleaportolan/Clea_Portolan_CV_Direction_Artistique_Web.pdf"
+                  download="Clea_Portolan_CV_Direction_Artistique_Web.pdf"
                   className="flex"
                 >
                   <Bouton content="Mon CV" icon={MdDownload} width="120px" />
@@ -114,7 +116,7 @@ const Home = () => {
         {/* SECTION CONTACT */}
         <section
           id="contact"
-          className="flex flex-col justify-center px-20 my-20 gap-8"
+          className="flex flex-col justify-center px-8 md:px-20 my-20 gap-8"
         >
           <Contact />
         </section>
@@ -133,7 +135,7 @@ const Home = () => {
       <footer className="flex w-full justify-center gap-2 text-primary/50 align-center py-5">
         <p>© Cléa Portolan | Tous droits réservés.</p>
         <a
-          className="cursor-pointer"
+          className="cursor-pointer underline decoration-solid"
           onClick={() => navigateWithTransition(`/mentions-legales`)}
         >
           Mentions légales

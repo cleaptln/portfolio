@@ -2,18 +2,15 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useTransition } from "../components/context/TransitionContext";
-import { IoArrowBackSharp } from "react-icons/io5";
 import SplitText from "../components/ReactBits/SplitText.jsx";
 import Bouton from "../components/Bouton.jsx";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
-
+import BackButton from "@/components/BackButton.jsx";
 
 const Alternance = () => {
   const containerRef = useRef();
-  const { navigateWithTransition } = useTransition();
 
   useGSAP(
     () => {
@@ -33,29 +30,11 @@ const Alternance = () => {
   return (
     <div
       ref={containerRef}
-      className="alternance_page min-h-screen bg-background px-20 pb-50 text-primary"
+      className="min-h-screen bg-background pt-16 px-8 md:px-20 pb-32 md:pb-50 text-primary"
     >
-      {/* Bouton retour */}
-      <button
-        onClick={() => navigateWithTransition("/")}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          padding: "10px 0",
-          gap: "20px",
-          marginBottom: "20px",
-          cursor: "pointer",
-          borderBottom: "1px solid var(--color-primary)",
-          backgroundColor: "transparent",
-        }}
-        className="transition-opacity anim-item"
-      >
-        <IoArrowBackSharp size={25} color="var(--color-primary)" />
-        <span>Retour</span>
-      </button>
-
+      <BackButton />
       {/* Titre */}
-      <h1 className="text-primary mt-10 text-8xl font-sans">
+      <h1 className="text-primary mt-10 text-5xl md:text-8xl font-sans">
         <SplitText
           text="Alternance"
           delay={50}
@@ -75,19 +54,19 @@ const Alternance = () => {
         </span>
       </p>
       <a
-        href="/public/Clea_Portolan_DA_Web_CV.pdf"
-        download="Clea_Portolan_DA_Web_CV.pdf"
+        href="/cleaportolan/Clea_Portolan_CV_Direction_Artistique_Web.pdf"
+        download="Clea_Portolan_CV_Direction_Artistique_Web.pdf"
         className="flex mt-8 anim-item"
       >
         <Bouton content="Mon CV" icon={MdDownload} width="120px" />
       </a>
       {/* Grille contenu */}
       <div className="mt-20 flex flex-col gap-8">
-
         {/* Section 1 — Missions */}
         <div className="anim-item">
           <h2 className="text-3xl md:text-4xl font-sans mb-8 md:mb-10">
-            <span className="font-display">C</span>e que je peux piloter chez vous
+            <span className="font-display">C</span>e que je peux piloter chez
+            vous
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -118,7 +97,6 @@ const Alternance = () => {
 
         {/* Sections Rythme + Arguments — empilées sur mobile, côte à côte sur desktop */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
           {/* Section 2 — Rythme */}
           <div className="anim-item border border-primary/20 rounded-2xl p-6 md:p-8 flex flex-col gap-6">
             <h2 className="text-3xl font-sans">
@@ -127,12 +105,17 @@ const Alternance = () => {
             <div className="flex flex-col gap-4">
               {[
                 { label: "École", value: "La Manu — Amiens" },
-                { label: "Master", value: "Direction Artistique & Design de Marque" },
+                {
+                  label: "Master",
+                  value: "Direction Artistique & Design de Marque",
+                },
                 { label: "Début", value: "Septembre 2026" },
                 { label: "Rythme", value: "1 sem. cours · 3 sem. entreprise" },
               ].map((row, i) => (
                 <div key={i} className="flex flex-col">
-                  <span className="text-primary/40 font-display text-lg">{row.label}</span>
+                  <span className="text-primary/40 font-display text-lg">
+                    {row.label}
+                  </span>
                   <span className="text-primary text-lg">{row.value}</span>
                 </div>
               ))}
@@ -142,7 +125,8 @@ const Alternance = () => {
           {/* Section 3 — Arguments financiers */}
           <div className="anim-item md:col-span-2 border border-primary/20 rounded-2xl p-6 md:p-8 flex flex-col gap-6">
             <h2 className="text-3xl font-sans">
-              <span className="font-display">P</span>ourquoi c'est avantageux pour vous
+              <span className="font-display">P</span>ourquoi c'est avantageux
+              pour vous
             </h2>
             <div className="flex flex-col gap-5">
               {[
@@ -163,13 +147,14 @@ const Alternance = () => {
                   <span className="text-primary/20 font-sans text-3xl mt-1 flex-shrink-0">{`0${i + 1}`}</span>
                   <div>
                     <h3 className="text-lg font-sans mb-1">{item.title}</h3>
-                    <p className="text-primary/60 leading-relaxed">{item.desc}</p>
+                    <p className="text-primary/60 leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
         </div>
       </div>
       {/* CTA contact */}
@@ -180,7 +165,7 @@ const Alternance = () => {
         <p className="text-primary/60 max-w-xl">
           Une question sur mon profil, mon rythme ou mes disponibilités ?
         </p>
-        <div>
+        <div className="flex flex-col sm:flex-row gap-0 sm:gap-4">
           <Bouton
             content="cleaportolan@gmail.com"
             icon={MdEmail}

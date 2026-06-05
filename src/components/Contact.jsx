@@ -9,7 +9,7 @@ const Contact = () => {
       <div className="w-70">
         <NageurEclaireur fill="#efece6" />
       </div>
-      <div className="contact-content flex gap-10">
+      <div className="flex flex-col md:flex-row gap-10">
         <div>
           <h2 className="text-primary text-4xl font-sans select-none">
             <span className="font-display">C</span>léa{" "}

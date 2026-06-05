@@ -1,15 +1,14 @@
-import React from "react";
-
 const Bouton = ({
   content,
   icon: Icon,
   onClick,
-  width
+  width,
+  textSize = "text-base"
 }) => {
   return (
     <button
       onClick={onClick}
-      className="bouton"
+      className={`bouton ${textSize}`}
       style={{ width }}
     >
       <span>{content}</span>

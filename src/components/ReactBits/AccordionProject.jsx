@@ -95,13 +95,16 @@ function AccordionItem({ value, name, description, image, speed }) {
           onMouseLeave={handleMouseLeave}
         >
           {/* Texte principal */}
-          <span
-            className="block font-sans text-2xl leading-none transition-transform duration-500 group-hover:translate-x-[4px]"
-          >
+          <span className="block font-sans text-xl leading-none transition-transform duration-500 group-hover:translate-x-[4px]">
             {name}
           </span>
 
-          {/* Marquee au hover (React Bits) */}
+          {/* Indicateur rotation — affiché à droite */}
+          <span className="absolute right-0 top-1/2 -translate-y-1/2 text-primary/40 transition-transform duration-500 ease-expo group-data-[state=open]:rotate-45">
+            +
+          </span>
+
+           {/* Marquee au hover (React Bits) */}
           <div
             className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none translate-y-[101%]"
             ref={marqueeRef}
@@ -134,14 +137,14 @@ function AccordionItem({ value, name, description, image, speed }) {
       {/* CONTENU DE L'ACCORDÉON */}
       <Accordion.Content className="overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
         <div className="pb-10 flex flex-col md:flex-row gap-10 items-start">
-          <p className="opacity-80 w-full">
+          <p className="opacity-80 w-full text-[18px] leading-relaxed">
             {description}
           </p>
           {image && (
             <img
               src={image}
               alt={name}
-              className="w-48 h-32 object-cover rounded-xl border border-primary/20"
+              className="w-full md:w-[30%] h-auto object-cover rounded-xl border border-primary/20"
             />
           )}
         </div>

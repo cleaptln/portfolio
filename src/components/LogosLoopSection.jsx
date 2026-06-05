@@ -19,7 +19,6 @@ import {
   SiThreedotjs,
 } from "react-icons/si";
 
-
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
   {
@@ -78,7 +77,15 @@ const techLogos = [
 
 function LogosLoopSection() {
   return (
-    <div style={{ height: "200px", position: "relative", overflow: "hidden" }}>
+    <div
+      style={{
+        height: "150px",
+        position: "relative",
+        overflow: "hidden",
+        display: "flex",
+        alignItems: "center",
+      }}
+    >
       <LogoLoop
         logos={techLogos}
         speed={100}

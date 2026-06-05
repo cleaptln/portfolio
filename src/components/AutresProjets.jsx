@@ -114,7 +114,7 @@ export default function AutresProjets() {
     >
       <div className="collection-inner">
         {/* COL LEFT — texte statique */}
-        <div className="texte col-left p-20 flex flex-col gap-10 justify-center">
+        <div className="col-left px-8 py-16 md:p-20 flex flex-col gap-10 justify-center">
           <h2 className="text-background text-5xl font-sans select-none">
             <span className="font-display">P</span>enser l'écosystème de marque
           </h2>

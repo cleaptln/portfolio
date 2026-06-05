@@ -19,8 +19,8 @@ const ProjetsContainer = () => {
   return (
     <section className="bg-background overflow-hidden pb-20">
       {/* Header : titre au dessus, flèches en dessous sur mobile */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between py-5 px-8 md:px-20 gap-4">
-        <h2 className="text-primary mb-8 text-5xl md:text-5xl font-sans select-none">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between pt-20 pb-8 md:pb-16 px-8 md:px-20 gap-4">
+        <h2 className="text-primary mb-0 text-5xl px-0 pb-8 max-w-[310px] md:max-w-none font-sans select-none">
           <span className="font-display">M</span>a sélection web
         </h2>
 
@@ -52,7 +52,7 @@ const ProjetsContainer = () => {
               className="flex-[0_0_80vw] md:flex-[0_0_450px] h-[360px] md:h-[400px] cursor-pointer"
             >
               <Card
-                className="h-full relative overflow-hidden fond-card"
+                className="h-full relative overflow-hidden"
                 style={{
                   backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${p.backgroundImage})`,
                   backgroundSize: "cover",
