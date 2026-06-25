@@ -2,10 +2,11 @@ import { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { MdArrowOutward, MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Card from "./ReactBits/Card.jsx";
-import { useTransition } from "./context/TransitionContext.jsx";
+import { usePageTransition } from "./context/usePageTransition.js";
 import { projectsData } from "../data/projets.js";
+
 const ProjetsContainer = () => {
-  const { navigateWithTransition } = useTransition();
+const { navigateWithTransition } = usePageTransition();
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,

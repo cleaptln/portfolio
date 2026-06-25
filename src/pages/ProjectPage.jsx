@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useTransition } from "../components/context/TransitionContext";
+import { usePageTransition } from "../components/context/usePageTransition.js";
 import { projectsData } from "../data/projets.js";
 import { IoArrowBackSharp } from "react-icons/io5";
 import SplitText from "../components/ReactBits/SplitText.jsx";
@@ -14,7 +14,7 @@ import BackButton from "@/components/BackButton";
 const ProjectPage = () => {
   const containerRef = useRef();
   const videoRef = useRef();
-  const { navigateWithTransition } = useTransition();
+  const { navigateWithTransition } = usePageTransition();
   const { slug } = useParams();
   const project = projectsData.find((p) => p.slug === slug);
   const currentIndex = projectsData.findIndex((p) => p.slug === slug);

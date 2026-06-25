@@ -1,8 +1,8 @@
 import { IoArrowBackSharp } from "react-icons/io5";
-import { useTransition } from "../components/context/TransitionContext";
+import { usePageTransition } from "../components/context/usePageTransition.js";
 
 const BackButton = ({ to = "/" }) => {
-  const { navigateWithTransition } = useTransition();
+  const { navigateWithTransition } = usePageTransition();
 
   return (
     <button

@@ -12,7 +12,7 @@ const Contact = () => {
       <div className="flex flex-col md:flex-row gap-10">
         <div>
           <h2 className="text-primary text-4xl font-sans select-none">
-            <span className="font-display">C</span>léa{" "}
+            <span className="font-display">C</span>léa
             <span className="font-display">P</span>ortolan
           </h2>
         </div>

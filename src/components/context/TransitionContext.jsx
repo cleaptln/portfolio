@@ -1,7 +1,6 @@
-import { createContext, useContext, useRef, useState } from "react";
+import { createContext, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 
 const TransitionContext = createContext();
 
@@ -35,12 +34,12 @@ export const TransitionProvider = ({ children }) => {
         window.scrollTo(0, 0);
       })
       // 3. LE RIDEAU CONTINUE DE MONTER POUR DISPARAÎTRE (Entrée nouvelle page)
-      .set(curtainRef.current, { transformOrigin: "top" }) // Astuce: on change l'origine
+      .set(curtainRef.current, { transformOrigin: "top" })
       .to(curtainRef.current, {
         scaleY: 0,
         duration: 0.8,
         ease: "power4.inOut",
-        delay: 0.1, // Petit délai pour laisser React charger la page
+        delay: 0.3, 
       });
   };
 
@@ -57,5 +56,4 @@ export const TransitionProvider = ({ children }) => {
   );
 };
 
-// Hook personnalisé pour utiliser la transition partout
-export const useTransition = () => useContext(TransitionContext);
+export default TransitionContext;

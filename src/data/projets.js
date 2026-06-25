@@ -160,7 +160,8 @@ export const projectsData = [
     title: "Fichaux et Vacherand",
     slug: "fichaux-et-vacherand",
     desc: "Site vitrine pour un syndic de copropriété, alliant rigueur et élégance.",
-    fullDesc: "Site réalisé avec le Studio CAD pour un syndic de copropriété.",
+    fullDesc:
+      "Site réalisé avec le Studio CAD pour un syndic de copropriété. L'objectif : démarquer Fichaux et Vacherand de ses concurrents par un UI design alliant ludisme et sobriété. En transformant les processus administratifs complexe en une expérience attractive, l'utilisateur est plus motivé à passer à l'action.",
     badges: ["Animation", "Web design"],
     context: "Projet professionnel",
     backgroundImage: `${import.meta.env.BASE_URL}/img/projets/FV_home.jpg`,
@@ -191,46 +192,46 @@ export const projectsData = [
       },
     ],
   },
-  {
-    id: 5,
-    title: "Glimpse",
-    slug: "glimpse",
-    desc: "Digitalisation du magazine Glimpse, de Skema Business School, avec une approche éditoriale et interactive.",
-    fullDesc: "En rédaction",
-    badges: ["Intégration", "Wordpress"],
-    context: "Projet professionnel",
-    backgroundImage: `${import.meta.env.BASE_URL}/img/projets/Glimpse_skema_business_school_home.jpg`,
-    videoDemo: `${import.meta.env.BASE_URL}/videos/FV_demo_site.mp4`,
-    credits: [
-      {
-        name: "Studio CAD",
-        url: "https://studiocad.fr/",
-      },
-      {
-        name: "Skema Business School",
-        url: "https://www.skema.edu/fr",
-      },
-      {
-        name: "Glimpse",
-        url: "https://glimpse.skema.edu/",
-      },
-    ],
-    year: "2026",
-    valeurAjoutee: [
-      {
-        name: "Digitaliser du contenu éditorial",
-        img: `${import.meta.env.BASE_URL}/img/projets/Glimpse_digitalisation.jpg`,
-        description:
-          "Adaptation d'une charte graphique print très colorée et complexe en une interface web épurée. L'enjeu était de simplifier les mises en page pour garantir une lisibilité optimale et une accessibilité conforme aux standards des grands médias en ligne.",
-      },
-      {
-        name: "Optimisation de l'expérience de lecture mobile",
-        img: `${import.meta.env.BASE_URL}/img/projets/Glimpse_exp_lecture.png`,
-        description:
-          "Conception pensée rigoureusement en Mobile-First pour s'adapter aux habitudes de lecture nomades (transports, pauses). Une attention particulière a été portée à la navigation fluide entre les articles et à l'intégration de fonctionnalités de partage rapide.",
-      },
-    ],
-  },
+  // {
+  //   id: 5,
+  //   title: "Glimpse",
+  //   slug: "glimpse",
+  //   desc: "Digitalisation du magazine Glimpse, de Skema Business School, avec une approche éditoriale et interactive.",
+  //   fullDesc: "En rédaction",
+  //   badges: ["Intégration", "Wordpress"],
+  //   context: "Projet professionnel",
+  //   backgroundImage: `${import.meta.env.BASE_URL}/img/projets/Glimpse_skema_business_school_home.jpg`,
+  //   videoDemo: `${import.meta.env.BASE_URL}/videos/FV_demo_site.mp4`,
+  //   credits: [
+  //     {
+  //       name: "Studio CAD",
+  //       url: "https://studiocad.fr/",
+  //     },
+  //     {
+  //       name: "Skema Business School",
+  //       url: "https://www.skema.edu/fr",
+  //     },
+  //     {
+  //       name: "Glimpse",
+  //       url: "https://glimpse.skema.edu/",
+  //     },
+  //   ],
+  //   year: "2026",
+  //   valeurAjoutee: [
+  //     {
+  //       name: "Digitaliser du contenu éditorial",
+  //       img: `${import.meta.env.BASE_URL}/img/projets/Glimpse_digitalisation.jpg`,
+  //       description:
+  //         "Adaptation d'une charte graphique print très colorée et complexe en une interface web épurée. L'enjeu était de simplifier les mises en page pour garantir une lisibilité optimale et une accessibilité conforme aux standards des grands médias en ligne.",
+  //     },
+  //     {
+  //       name: "Optimisation de l'expérience de lecture mobile",
+  //       img: `${import.meta.env.BASE_URL}/img/projets/Glimpse_exp_lecture.png`,
+  //       description:
+  //         "Conception pensée rigoureusement en Mobile-First pour s'adapter aux habitudes de lecture nomades (transports, pauses). Une attention particulière a été portée à la navigation fluide entre les articles et à l'intégration de fonctionnalités de partage rapide.",
+  //     },
+  //   ],
+  // },
   // {
   //   id: 3,
   //   title: "Maxime Depinoy",

@@ -1,6 +1,5 @@
 import ProjetsContainer from "../components/ProjetsContainer.jsx";
 import LogosLoopSection from "../components/LogosLoopSection.jsx";
-import Lanyard from "../components/ReactBits/Lanyard.jsx";
 import Contact from "../components/Contact.jsx";
 import AutresProjets from "../components/AutresProjets.jsx";
 import { MdDownload } from "react-icons/md";
@@ -9,10 +8,11 @@ import HeroSection from "@/components/HeroSection.jsx";
 import Dither from "../components/Dither.jsx";
 import { TbBriefcase } from "react-icons/tb";
 import { MdOutlineWork } from "react-icons/md";
-import { useTransition } from "../components/context/TransitionContext.jsx";
+import { usePageTransition } from "../components/context/usePageTransition.js";
+import TiltedCard from "../components/ReactBits/TiltedCard.jsx";
 
 const Home = () => {
-  const { navigateWithTransition } = useTransition();
+  const { navigateWithTransition } = usePageTransition();
 
   return (
     <>
@@ -37,51 +37,30 @@ const Home = () => {
 
       <main>
         {/* SECTION PROFIL */}
-        <section id="mon-profil">
-          <section className="profil w-full relative flex flex-col md:block md:h-[90vh]">
-            {/* Lanyard — photo statique sur mobile, 3D sur desktop */}
-            <div className="md:hidden w-full h-auto">
-              <img
-                src="/cleaportolan/img/clea_card_mobile.png"
-                alt="Carte Cléa Portolan"
-                className="w-full object-contain"
+        <section id="mon-profil" className="w-full">
+          <section className="profil flex flex-col md:flex-row items-center gap-20 justify-center px-8 py-20 md:py-40 md:px-16">
+            <div className="flex flex-col w-[33%] md:w-fulljustify-center items-center">
+              <TiltedCard
+                imageSrc="/cleaportolan/img/Clea_Portolan.jpg"
+                altText="Cléa Portolan, photo"
+                captionText="Cléa Portolan"
+                containerHeight="300px"
+                containerWidth="300px"
+                imageHeight="300px"
+                imageWidth="300px"
+                rotateAmplitude={12}
+                scaleOnHover={1.15}
+                showMobileWarning={false}
+                showTooltip={false}
+                displayOverlayContent
+                overlayContent={
+                  <div className="translate-x-2 translate-y-2 bg-neutral-950/60 backdrop-blur-md text-white p-2 rounded-xl border border-white/10 text-center">
+                    <p className="text-lg"><span className="font-display">C</span>léa <span className="font-display">P</span>ortolan</p>
+                  </div>
+                }
               />
-            </div>
-            <div className="hidden md:block carte absolute top-0 right-60 w-full h-full">
-              <Lanyard position={[0, 0, 16]} gravity={[0, -40, 0]} />
-            </div>
-
-            {/* Description */}
-            <div className="px-8 py-12 md:absolute md:top-[50%] md:translate-y-[-50%] md:left-[50%] md:pr-10 md:px-0 md:py-0 z-10 [&_p]:max-w-full">
-              <h2 className="text-primary leading-14 text-4xl md:text-5xl font-sans select-none mb-8 ">
-                <span className="font-display">D</span>irection artistique
-                <br />
-                <span className="font-display">I</span>nteraction &{" "}
-                <span className="font-display">P</span>oduct designer
-              </h2>
-              <div className="md:max-w-[680px]">
-                <p className="text-primary/70 leading-relaxed max-w-xl mb-8">
-                  Je suis Cléa Portolan, issue d'un BUT MMI, parcours
-                  développement web.{" "}
-                  <strong className="text-primary">
-                    Activement en recherche d'alternance,
-                  </strong>{" "}
-                  je possède un éventail de compétences pluridisciplinaires et
-                  une très bonne capacité d'apprentissage. J'use d'une vision
-                  créative passionnelle, nourrie d'une réflexion organique qui
-                  s'épanouit dans la complexité.
-                </p>
-
-                <h3 className="opacity-50 font-display text-lg">
-                  Mon objectif
-                </h3>
-                <p className="text-primary/70 leading-relaxed max-w-xl">
-                  Concevoir des produits numériques et des identités de marque
-                  mémorables, de la vision stratégique à l'expérience
-                  interactive finale.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-8">
+              {/* Boutons d'action */}
+              <div className="flex flex-col items-center justify-center sm:flex-row gap-4 sm:gap-8 mt-12">
                 <a
                   href="/cleaportolan/Clea_Portolan_CV_Direction_Artistique_Web.pdf"
                   download="Clea_Portolan_CV_Direction_Artistique_Web.pdf"
@@ -89,7 +68,7 @@ const Home = () => {
                 >
                   <Bouton content="Mon CV" icon={MdDownload} width="120px" />
                 </a>
-                <a className="flex">
+                <a className="flex cursor-pointer">
                   <Bouton
                     onClick={() => navigateWithTransition("/alternance")}
                     content="À propos de l'alternance"
@@ -97,6 +76,41 @@ const Home = () => {
                     width="220px"
                   />
                 </a>
+              </div>
+            </div>
+            {/* description */}
+            <div className="flex flex-col w-full md:w-[66%]">
+              <h2 className="text-primary leading-tight text-4xl md:text-5xl font-sans select-none mb-8">
+                <span className="font-display">D</span>irection artistique
+                <br />
+                <span className="font-display">D</span>éveloppement web
+              </h2>
+
+              <div className="md:max-w-[680px]">
+                <p className="text-primary/70 leading-relaxed mb-8">
+                  Je suis Cléa Portolan, diplômée BUT MMI, parcours
+                  développement web et dispositifs interactifs. J'intègre à la
+                  rentrée le Master Direction Artistique, stratégie et design de
+                  marque à La Manu (Amiens).
+                  <br />
+                  <strong className="text-primary">
+                    Activement en recherche d'alternance pour Septembre 2026,
+                  </strong>
+                  <br />
+                  je possède un éventail de compétences pluridisciplinaires et
+                  une très bonne capacité d'apprentissage. J'use d'une vision
+                  créative passionnelle, nourrie d'une réflexion organique qui
+                  s'épanouit dans la complexité.
+                </p>
+
+                <h3 className="opacity-50 font-display text-lg mb-2">
+                  Mon objectif
+                </h3>
+                <p className="text-primary/70 leading-relaxed">
+                  Concevoir des produits numériques et des identités de marque
+                  mémorables, de la vision stratégique à l'expérience
+                  interactive finale.
+                </p>
               </div>
             </div>
           </section>
