@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "Portfolio",
   "homepage": "https://cleaptln.github.io/portfolio",
   "private": true,
   "version": "0.0.0",
@@ -14,11 +14,9 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
-    "@react-three/cannon": "^6.6.0",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
     "@react-three/postprocessing": "^3.0.4",
-    "@react-three/rapier": "^2.2.0",
     "@tailwindcss/postcss": "^4.1.18",
     "@tailwindcss/vite": "^4.1.18",
     "@types/three": "^0.182.0",
@@ -28,9 +26,7 @@
     "gh-pages": "^6.3.0",
     "gsap": "^3.14.2",
     "lucide-react": "^0.563.0",
-    "mesa": "^0.7.2",
     "motion": "^12.42.0",
-    "ogl": "^1.0.11",
     "postprocessing": "^6.38.2",
     "radix-ui": "^1.4.3",
     "react": "^19.2.0",

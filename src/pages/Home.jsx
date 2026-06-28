@@ -41,7 +41,7 @@ const Home = () => {
           <section className="profil flex flex-col md:flex-row items-center gap-20 justify-center px-8 py-20 md:py-40 md:px-16">
             <div className="flex flex-col w-[33%] md:w-fulljustify-center items-center">
               <TiltedCard
-                imageSrc="/cleaportolan/img/Clea_Portolan.jpg"
+                imageSrc={`${import.meta.env.BASE_URL}/img/Clea_Portolan.jpg`}
                 altText="Cléa Portolan, photo"
                 captionText="Cléa Portolan"
                 containerHeight="300px"
@@ -55,14 +55,17 @@ const Home = () => {
                 displayOverlayContent
                 overlayContent={
                   <div className="translate-x-2 translate-y-2 bg-neutral-950/60 backdrop-blur-md text-white p-2 rounded-xl border border-white/10 text-center">
-                    <p className="text-lg"><span className="font-display">C</span>léa <span className="font-display">P</span>ortolan</p>
+                    <p className="text-lg">
+                      <span className="font-display">C</span>léa{" "}
+                      <span className="font-display">P</span>ortolan
+                    </p>
                   </div>
                 }
               />
               {/* Boutons d'action */}
               <div className="flex flex-col items-center justify-center sm:flex-row gap-4 sm:gap-8 mt-12">
                 <a
-                  href="/cleaportolan/Clea_Portolan_CV_Direction_Artistique_Web.pdf"
+                  href={`${import.meta.env.BASE_URL}/Clea_Portolan_CV_Direction_Artistique_Web.pdf`}
                   download="Clea_Portolan_CV_Direction_Artistique_Web.pdf"
                   className="flex"
                 >

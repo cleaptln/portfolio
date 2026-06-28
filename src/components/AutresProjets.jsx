@@ -5,32 +5,32 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SRCS = [
-  "/cleaportolan/img/autres-projets/flaine3.jpg",
-  "/cleaportolan/img/autres-projets/bisou-sucre-carte.jpg",
-  "/cleaportolan/img/autres-projets/Clea_Portolan_Web_Design_graphique_Movember_2.jpg",
-  "/cleaportolan/img/autres-projets/Clea_Portolan_Web_Design__Graphique_Visions.jpg",
-  "/cleaportolan/img/autres-projets/aleteia.jpg",
-  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_Edmond.jpg",
-  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_Evenementiel_Mariage_1.jpg",
-  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_Kerouac_2.jpg",
-  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_Maxime_Depinoy1.jpg",
-  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_Maxime_Depinoy4.jpg",
-  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_Mystere_A_L_IUT.jpg",
-  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_graphique_Web_Like-Communication_1.jpg",
-  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_WesAnderson_3.jpg",
-  "/cleaportolan/img/autres-projets/Clea_Portolan_photographie_studio61.jpg",
-  "/cleaportolan/img/autres-projets/Clea_Portolan_photographie_studio62.jpg",
-  "/cleaportolan/img/autres-projets/Clea_Portolan_Design_Graphique_Evenementiel_Mariage_2.jpg",
-  "/cleaportolan/img/autres-projets/Clea_Portolan_Web_Design_Graphique_Imnesia1.jpg",
-  "/cleaportolan/img/autres-projets/dare_mockup.jpg",
-  "/cleaportolan/img/autres-projets/fondEcran.jpg",
-  "/cleaportolan/img/autres-projets/henri-matisse-brochure.jpg",
-  "/cleaportolan/img/autres-projets/KYVOS_PLAY.png",
-  "/cleaportolan/img/autres-projets/lampadaireVert.JPG",
-  "/cleaportolan/img/autres-projets/logoStyleWaka.png",
-  "/cleaportolan/img/autres-projets/miroir_mockup.jpg",
-  "/cleaportolan/img/autres-projets/mockup_portfolio_v2.jpg",
-  "/cleaportolan/img/autres-projets/terre_eclat_home.jpg",
+  `${import.meta.env.BASE_URL}/img/autres-projets/flaine3.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/bisou-sucre-carte.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/Clea_Portolan_Web_Design_graphique_Movember_2.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/Clea_Portolan_Web_Design__Graphique_Visions.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/aleteia.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/Clea_Portolan_Design_Graphique_Edmond.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/Clea_Portolan_Design_Graphique_Evenementiel_Mariage_1.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/Clea_Portolan_Design_Graphique_Kerouac_2.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/Clea_Portolan_Design_Graphique_Maxime_Depinoy1.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/Clea_Portolan_Design_Graphique_Maxime_Depinoy4.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/Clea_Portolan_Design_Graphique_Mystere_A_L_IUT.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/Clea_Portolan_Design_graphique_Web_Like-Communication_1.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/Clea_Portolan_Design_Graphique_WesAnderson_3.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/Clea_Portolan_photographie_studio61.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/Clea_Portolan_photographie_studio62.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/Clea_Portolan_Design_Graphique_Evenementiel_Mariage_2.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/Clea_Portolan_Web_Design_Graphique_Imnesia1.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/dare_mockup.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/fondEcran.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/henri-matisse-brochure.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/KYVOS_PLAY.png`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/lampadaireVert.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/logoStyleWaka.png`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/miroir_mockup.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/mockup_portfolio_v2.jpg`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/terre_eclat_home.jpg`,
 ];
 
 // Découpe le tableau
@@ -118,7 +118,9 @@ export default function AutresProjets() {
           <h2 className="text-background text-5xl font-sans select-none">
             <span className="font-display">P</span>enser l'écosystème de marque
           </h2>
-          <h3 className="text-background text-xl"><span className="font-display">D</span>e l'identité à l'écran</h3>
+          <h3 className="text-background text-xl">
+            <span className="font-display">D</span>e l'identité à l'écran
+          </h3>
           <p
             className="text-background max-w-xl leading-relaxed"
             style={{ opacity: 0.8 }}

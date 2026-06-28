@@ -139,7 +139,7 @@ const ProjectPage = () => {
         <h3 className="text-4xl font-sans mb-4 mt-20">
           <span className="font-display">M</span>a valeur ajoutée au projet
         </h3>
-        <AccordionProject items={itemsValeurAjoutee} />
+        <AccordionProject key={slug} items={itemsValeurAjoutee} />{" "}
       </div>
       {/* Navigation entre projets */}
       <div className="mt-24 flex justify-between items-end gap-6 border-t border-primary/20 pt-8">

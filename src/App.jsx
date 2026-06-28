@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import {useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";

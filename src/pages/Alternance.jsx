@@ -10,7 +10,7 @@ import BackButton from "@/components/BackButton.jsx";
 
 const Alternance = () => {
   const containerRef = useRef();
-  
+
   // État pour gérer la cible sélectionnée par le visiteur
   const [target, setTarget] = useState("agence");
 
@@ -26,7 +26,7 @@ const Alternance = () => {
         delay: 0.5,
       });
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   // Les données adaptées en fonction de la cible
@@ -81,7 +81,7 @@ const Alternance = () => {
       className="min-h-screen bg-background pt-16 px-8 md:px-20 pb-32 md:pb-50 text-primary"
     >
       <BackButton />
-      
+
       {/* Titre */}
       <h1 className="text-primary mt-10 text-5xl md:text-8xl font-sans">
         <SplitText
@@ -102,9 +102,9 @@ const Alternance = () => {
           1 semaine cours / 3 semaines entreprise.
         </span>
       </p>
-      
+
       <a
-        href="/cleaportolan/Clea_Portolan_CV_Direction_Artistique_Web.pdf"
+        href={`${import.meta.env.BASE_URL}/Clea_Portolan_CV_Direction_Artistique_Web.pdf`}
         download="Clea_Portolan_CV_Direction_Artistique_Web.pdf"
         className="inline-block mt-8 anim-item"
       >
@@ -113,14 +113,13 @@ const Alternance = () => {
 
       {/* Grille contenu */}
       <div className="mt-20 flex flex-col gap-12">
-        
         {/* Section 1 — Missions Interactives */}
         <div className="anim-item">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-10 gap-6">
             <h2 className="text-3xl md:text-4xl font-sans">
               <span className="font-display">C</span>e que je peux apporter à...
             </h2>
-            
+
             {/* Système d'onglets (Tabs) */}
             <div className="flex flex-wrap gap-2">
               {[
@@ -152,7 +151,9 @@ const Alternance = () => {
               >
                 <span className="font-sans text-primary/40 text-5xl">{`0${i + 1}`}</span>
                 <h3 className="text-xl font-sans leading-snug">{item.title}</h3>
-                <p className="text-primary/60 leading-relaxed text-sm md:text-base">{item.desc}</p>
+                <p className="text-primary/60 leading-relaxed text-sm md:text-base">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -168,7 +169,10 @@ const Alternance = () => {
             <div className="flex flex-col gap-4">
               {[
                 { label: "École", value: "La Manu — Amiens" },
-                { label: "Master", value: "Direction Artistique & Design de Marque" },
+                {
+                  label: "Master",
+                  value: "Direction Artistique & Design de Marque",
+                },
                 { label: "Début", value: "Septembre 2026" },
                 { label: "Rythme", value: "1 sem. cours · 3 sem. entreprise" },
               ].map((row, i) => (
@@ -185,7 +189,8 @@ const Alternance = () => {
           {/* Section 3 — Arguments financiers */}
           <div className="anim-item md:col-span-2 border border-primary/20 rounded-2xl p-6 md:p-8 flex flex-col gap-6">
             <h2 className="text-3xl font-sans">
-              <span className="font-display">P</span>ourquoi c'est avantageux pour vous
+              <span className="font-display">P</span>ourquoi c'est avantageux
+              pour vous
             </h2>
             <div className="flex flex-col gap-5">
               {[
@@ -229,7 +234,9 @@ const Alternance = () => {
           <Bouton
             content="cleaportolan@gmail.com"
             icon={MdEmail}
-            onClick={() => (window.location.href = "mailto:cleaportolan@gmail.com")}
+            onClick={() =>
+              (window.location.href = "mailto:cleaportolan@gmail.com")
+            }
             width="280px"
           />
           <Bouton
