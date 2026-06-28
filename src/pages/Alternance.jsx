@@ -104,7 +104,7 @@ const Alternance = () => {
       </p>
 
       <a
-        href={`${import.meta.env.BASE_URL}/Clea_Portolan_CV_Direction_Artistique_Web.pdf`}
+        href={`${import.meta.env.BASE_URL}/img/Clea_Portolan_CV_Direction_Artistique_Web.pdf`}
         download="Clea_Portolan_CV_Direction_Artistique_Web.pdf"
         className="inline-block mt-8 anim-item"
       >

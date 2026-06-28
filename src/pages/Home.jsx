@@ -65,7 +65,7 @@ const Home = () => {
               {/* Boutons d'action */}
               <div className="flex flex-col items-center justify-center sm:flex-row gap-4 sm:gap-8 mt-12">
                 <a
-                  href={`${import.meta.env.BASE_URL}/Clea_Portolan_CV_Direction_Artistique_Web.pdf`}
+                  href={`${import.meta.env.BASE_URL}/img/Clea_Portolan_CV_Direction_Artistique_Web.pdf`}
                   download="Clea_Portolan_CV_Direction_Artistique_Web.pdf"
                   className="flex"
                 >

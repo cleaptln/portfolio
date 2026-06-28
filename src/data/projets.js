@@ -53,7 +53,7 @@ export const projectsData = [
     credits: [
       { name: "Étudiants MMI" },
       {
-        name: "BUT MMI Lens",
+        name: "MMI Lens",
         url: "https://www.iut-lens.univ-artois.fr/formations/but-mmi/",
       },
     ],
@@ -128,8 +128,9 @@ export const projectsData = [
     backgroundImage: `${import.meta.env.BASE_URL}/img/projets/Clea_Portolan_Web_La-Ligne-Blanche.jpg`,
     videoDemo: `${import.meta.env.BASE_URL}/videos/la_ligne_blanche_demo.mp4`,
     credits: [
+      { name: "Étudiants MMI" },
       {
-        name: "Étudiants MMI",
+        name: "MMI Lens",
         url: "https://www.iut-lens.univ-artois.fr/formations/but-mmi/",
       },
     ],
