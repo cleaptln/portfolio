@@ -21,7 +21,7 @@ const Contact = () => {
             content="cleaportolan@gmail.com"
             icon={MdEmail}
             onClick={() =>
-              (window.location.href = "mailto:cleaportolan@gmail.com")
+              window.open("mailto:cleaportolan@gmail.com", "_self")
             }
             width="280px"
           />
