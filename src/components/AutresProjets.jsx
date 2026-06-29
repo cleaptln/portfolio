@@ -26,7 +26,7 @@ const SRCS = [
   `${import.meta.env.BASE_URL}/img/autres-projets/fondEcran.jpg`,
   `${import.meta.env.BASE_URL}/img/autres-projets/henri-matisse-brochure.jpg`,
   `${import.meta.env.BASE_URL}/img/autres-projets/KYVOS_PLAY.png`,
-  `${import.meta.env.BASE_URL}/img/autres-projets/lampadaireVert  .JPG`,
+  `${import.meta.env.BASE_URL}/img/autres-projets/lampadaireVert.JPG`,
   `${import.meta.env.BASE_URL}/img/autres-projets/logoStyleWaka.png`,
   `${import.meta.env.BASE_URL}/img/autres-projets/miroir_mockup.jpg`,
   `${import.meta.env.BASE_URL}/img/autres-projets/mockup_portfolio_v2.jpg`,
