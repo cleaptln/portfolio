@@ -37,6 +37,7 @@ const SRCS = [
 const col1Srcs = SRCS.slice(0, 8);
 const col2Srcs = SRCS.slice(9, 15);
 const col3Srcs = SRCS.slice(16, 26);
+const triggers = [];
 
 export default function AutresProjets() {
   const sectionRef = useRef(null);
@@ -71,6 +72,7 @@ export default function AutresProjets() {
         invalidateOnRefresh: true,
       },
     });
+    triggers.push(tl.scrollTrigger);
 
     tl.to(col1, { y: () => -(col1.scrollHeight - container.clientHeight) }, 0);
 
@@ -101,8 +103,8 @@ export default function AutresProjets() {
     window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
-      ScrollTrigger.getAll().forEach((t) => t.kill());
+      triggers.forEach((t) => t?.kill());
+      tl.kill();
     };
   }, []);
 
@@ -138,17 +140,17 @@ export default function AutresProjets() {
         <div className="col-right" ref={containerRef}>
           <div className="coll coll-1" ref={col1Ref}>
             {col1Srcs.map((src, i) => (
-              <img key={i} src={src} alt="" />
+              <img key={i} src={src} alt="" loading="lazy" />
             ))}
           </div>
           <div className="coll coll-2" ref={col2Ref}>
             {col2Srcs.map((src, i) => (
-              <img key={i} src={src} alt="" />
+              <img key={i} src={src} alt="" loading="lazy"/>
             ))}
           </div>
           <div className="coll coll-3" ref={col3Ref}>
             {col3Srcs.map((src, i) => (
-              <img key={i} src={src} alt="" />
+              <img key={i} src={src} alt="" loading="lazy"/>
             ))}
           </div>
         </div>

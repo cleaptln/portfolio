@@ -10,11 +10,19 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: "/portfolio",
-
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
+    alias: { "@": path.resolve(__dirname, "./src") },
   },
   assetsInclude: ["**/*.glb"],
-});
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          three: ['three'],
+          gsap: ['gsap'],
+          react: ['react', 'react-dom', 'react-router-dom'],
+        }
+      }
+    }
+  }
+})

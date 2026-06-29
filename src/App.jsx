@@ -10,7 +10,6 @@ import Alternance from "./pages/Alternance.jsx";
 gsap.registerPlugin(ScrollToPlugin);
 
 function App() {
-  // const navRef = useRef(null);
 
   const location = useLocation();
   useEffect(() => {
